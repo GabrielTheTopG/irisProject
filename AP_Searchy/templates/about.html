@@ -13,11 +13,10 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="d-flex ms-4 justify-content-end">
-                        <a class="nav-link me-3" href="searchy.html">Startseite</a>
-                        <a class="nav-link me-3" href="about.html">Über uns</a>
-                        <a class="nav-link me-3" href="impressum.html">Impressum</a>
-                        <a class="nav-link me-3" href="datenschutz.html">Datenschutz</a>
-                        <a class="nav-link me-3" href="cookies.html">Cookies</a>
+                        <a class="nav-link me-3" href="{{ url_for('searchy') }}">Startseite</a>
+                        <a class="nav-link me-3" href="{{ url_for('impressum') }}">Impressum</a>
+                        <a class="nav-link me-3" href="{{ url_for('datenschutz') }}">Datenschutz</a>
+                        <a class="nav-link me-3" href="{{ url_for('cookies') }}">Cookies</a>
                     </div>
                 </div>
                 <div class="logo-container">

@@ -32,11 +32,34 @@ def search():
     query = request.form['query']
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute("SELECT content FROM papers WHERE content LIKE ?", ('%' + query + '%',))
-    result = cur.fetchone()
+
+    if query.startswith('#'):
+        # Search by hashtag (case-insensitive)
+        hashtag = query[1:]  # Remove the `#` for searching
+        cur.execute("""
+            SELECT DISTINCT p.content 
+            FROM papers p
+            JOIN hashtags h ON p.id = h.paper_id
+            WHERE LOWER(h.hashtag) = LOWER(?)
+        """, (hashtag,))
+    else:
+        # Regular content search (case-insensitive)
+        cur.execute("""
+            SELECT DISTINCT content 
+            FROM papers 
+            WHERE LOWER(content) LIKE LOWER(?)
+        """, ('%' + query + '%',))
+    
+    results = cur.fetchall()
     conn.close()
-    result = result[0] if result else "Keine Inhalte gefunden."
-    return render_template('searchy.html', result=result)
+
+    # Format results for display
+    if results:
+        formatted_results = '<br><br>'.join([row['content'] for row in results])
+    else:
+        formatted_results = "Keine Inhalte gefunden."
+    
+    return render_template('searchy.html', result=formatted_results)
 
 @app.route('/about')
 def about():
