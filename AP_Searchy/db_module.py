@@ -74,27 +74,28 @@ def import_markdown(directory):
                     # Convert Markdown content to HTML for storage
                     html_content = markdown.markdown(md_content)
                     
+                    # Check if the content already exists in the database
+                    c.execute('SELECT id FROM papers WHERE content = ?', (html_content,))
+                    if not c.fetchone():
+                        print(f"Inserting new content from {file_path}")
+                        # Insert the HTML content into the papers table
+                        c.execute('INSERT INTO papers (content, directory_name) VALUES (?, ?)', (html_content, directory_name))
+                        paper_id = c.lastrowid
+                    
+                        # Extract hashtags using a regex and store them in the hashtags table
+                        hashtags = re.findall(r'#(\w+)', md_content)
+                        for tag in hashtags:
+                            c.execute('INSERT INTO hashtags (paper_id, hashtag) VALUES (?, ?)', (paper_id, tag))
+                    
+                        # Extract images in base64 format from the Markdown content and store them
+                        image_matches = re.findall(r'!\[.*\]\((data:image/.+;base64,.+)\)', md_content)
+                        for image_data in image_matches:
+                            c.execute('INSERT INTO images (paper_id, image_data) VALUES (?, ?)', (paper_id, image_data))
+
                     # Log the processing time for each file
                     print(f"Processed {file_path} in {time.time() - start_time:.2f} seconds.")
-                    
-                    # Insert the HTML content into the papers table
-                    c.execute('INSERT INTO papers (content, directory_name) VALUES (?, ?)', (html_content, directory_name))
-                    paper_id = c.lastrowid
-                    
-                    # Extract hashtags using a regex and store them in the hashtags table
-                    hashtags = re.findall(r'#(\w+)', md_content)
-                    for tag in hashtags:
-                        c.execute('INSERT INTO hashtags (paper_id, hashtag) VALUES (?, ?)', (paper_id, tag))
-                    
-                    # Extract images in base64 format from the Markdown content and store them
-                    image_matches = re.findall(r'!\[.*\]\((data:image/.+;base64,.+)\)', md_content)
-                    for image_data in image_matches:
-                        c.execute('INSERT INTO images (paper_id, image_data) VALUES (?, ?)', (paper_id, image_data))
-                
                 except Exception as e:
-                    # Print any errors encountered during file processing
-                    print(f"Error processing file {file_path}: {e}")
-    
+                    print(f"Failed to process {file_path}: {e}")
     # Commit changes and close the connection
     conn.commit()
     conn.close()
