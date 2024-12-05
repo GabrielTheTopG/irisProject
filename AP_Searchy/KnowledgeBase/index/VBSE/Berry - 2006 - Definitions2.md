@@ -1,0 +1,12 @@
+- ## 3.
+#3. #Value #Implementation #Phases #Feature #Value #ValueBased #Software #Engineering #Software #Engineering 
+The process of characterizing an object of interest with respect to a chosen model consists of collecting and analyzing measures to understand the object at the cho- sen level of abstraction (Fenton and Pfleeger, 1997). The object of interest is  whatever you are interested in measuring. Common objects of interest in software  engineering are systems, projects, processes, and work products (e.g., software,  specifications, designs). The term chosen model highlights that it is a matter of  choice which properties of the object of interest will be evaluated and how those  properties will be evaluated. Characterization occurs when values are assigned to  the properties of the object of interest through an act of measurement that maps  empirical observations of each significant property onto the chosen model. The  term chosen level of abstraction is used to emphasize that people select the appro- priate level of understanding of the object of interest based on their need for in-8 Measurement and Decision Making 159 formation, their background knowledge, and their degree of interest in the object.  That is, the user of the model must determine a level of detail that suits his pur- poses.
+
+- ## 3.
+#3. #Value #Implementation #Phases #Feature #Value #ValueBased #Software #Engineering #Software #Engineering 
+evaluation of measurable concepts such as value, project risk, and product  quality requires multiple views into the object of interest. These views are then  synthesized into an overall characterization of the object of interest. For example,  software quality is a familiar concept for which there are many views that need to  be considered. A software quality model might state, for example, that:  Quality is a function of: quality in use, process quality, product quality,  benefits obtained, resources consumed, context of use
+
+- ## 3.
+#3. #Value #Implementation #Phases #Feature #Value #ValueBased #Software #Engineering #Software #Engineering 
+If the object of interest is defined as project value, then the chosen model would  show how value is a function of a particular subset of the project’s attributes. This  model might be expressed, for example, as:  Project value is a function of: acceptance of technology * w1, exploitation of technology * w2, cost of technology * w3, benefit of technology * w4, strategic impact of technology * w5
+

@@ -1,0 +1,4 @@
+- ## #buildDuration
+##buildDuration #Continuous #Integration #Development #Quality #Value #Creation #Value #Drivers #ValueBased #Software #Engineering #Software #Engineering 
+• Track the build time at the end of each iteration or fail the build if it takes longer than an agreed limit. • Keep the build as simple as possible - ideally a single build file for all environments. • Aim for a small number of fast technologies in the build. • Build once, use many. Only build the executables once then use them in later builds. • Organise tests and test environments so that different groups of tests can be run in different and possibly par- allel environments. • Minimise runtime dependencies by running the appli- cation standalone. Stub or Mock runtime dependen- cies. Implement tests for any assumptions for these dependencies.
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Über uns | Searchy</title>
+</head>
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="d-flex ms-4 justify-content-end">
+                        <a class="nav-link me-3" href="searchy.html">Startseite</a>
+                        <a class="nav-link me-3" href="about.html">Über uns</a>
+                        <a class="nav-link me-3" href="impressum.html">Impressum</a>
+                        <a class="nav-link me-3" href="datenschutz.html">Datenschutz</a>
+                        <a class="nav-link me-3" href="cookies.html">Cookies</a>
+                    </div>
+                </div>
+                <div class="logo-container">
+                    <img src="logo.jpg" alt="Logo" class="logo">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container mt-5 text-center">
+            <h1>Über uns</h1>
+
+            <!-- Accordion Start -->
+            <div class="accordion" id="aboutAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMission">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMission" aria-expanded="true" aria-controls="collapseMission">
+                            Unsere Mission
+                        </button>
+                    </h2>
+                    <div id="collapseMission" class="accordion-collapse collapse show" aria-labelledby="headingMission" data-bs-parent="#aboutAccordion">
+                        <div class="accordion-body">
+                            Unser Ziel ist es, eine benutzerfreundliche Plattform zu schaffen, die Menschen dabei unterstützt, schnell und einfach an relevante Informationen zu gelangen.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTeam">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTeam" aria-expanded="false" aria-controls="collapseTeam">
+                            Unser Team
+                        </button>
+                    </h2>
+                    <div id="collapseTeam" class="accordion-collapse collapse" aria-labelledby="headingTeam" data-bs-parent="#aboutAccordion">
+                        <div class="accordion-body">
+                            Unser Team besteht aus erfahrenen Entwicklern, Designern und Informationsspezialisten, die sich leidenschaftlich dafür einsetzen, Ihre Sucherfahrung zu verbessern.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingContact">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+                            Kontaktieren Sie uns
+                        </button>
+                    </h2>
+                    <div id="collapseContact" class="accordion-collapse collapse" aria-labelledby="headingContact" data-bs-parent="#aboutAccordion">
+                        <div class="accordion-body">
+                            Wir sind stets offen für Feedback. Besuchen Sie unsere <a href="kontakt.html">Kontaktseite</a>, um uns eine Nachricht zu senden.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Accordion End -->
+        </div>
+    </main>
+    <footer class="fixed-bottom">
+        <nav class="navbar navbar-expand-md">
+            <div class="navbar-nav" style="margin-right: auto; margin-left: auto;">
+                <div class="d-flex">
+                    <a class="nav-link me-3" href="impressum.html">Impressum</a>
+                    <a class="nav-link me-3" href="datenschutz.html">Datenschutz</a>
+                    <a class="nav-link me-3" href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Allgemeines Design */
+:root {
+    --primary-blue: #4A90E2;
+    --light-blue: #E3F2FD;
+    --hover-blue: #DAE2F0;
+}
+
+/* Langsamerer, sanfterer Farbwechsel für den Hintergrund */
+@@keyframes backgroundColorChange {
+    0% { background-color: #E3F8FF; }   /* Sehr helles Blau */
+    25% { background-color: #CCF1FF; }  /* Heller Blauton */
+    50% { background-color: #B3EBFF; }  /* Leichter Blauton */
+    75% { background-color: #99E4FF; }  /* Mittelhelles Blau */
+    100% { background-color: #E3F8FF; } /* Zurück zur Startfarbe */
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    animation: backgroundColorChange 20s infinite ease-in-out; /* Sanfte Übergänge */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Navbar - Verbesserungen */
+.navbar {
+    background-color: rgba(74, 144, 226, 0.9); /* Transparente Farbe */
+    border-radius: 8px;
+    padding: 0.5rem 1rem; /* Optimiertes Padding */
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Schatten für mehr Tiefe */
+    transition: background-color 0.3s ease; /* Weicher Übergang für Farbe */
+}
+
+.navbar:hover {
+    background-color: rgba(74, 144, 226, 0.95); /* Leicht intensivere Farbe beim Hover */
+}
+
+.navbar .nav-link {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem; /* Hier die Schriftgröße anpassen */
+    margin: 0 1rem;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #DAE2F0; /* Hellerer Farbton beim Hover */
+    text-decoration: underline; /* Unterstreichung für Interaktivität */
+}
+
+/* Logo-Design */
+.logo-container {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Füllt die Höhe der Navbar aus */
+}
+
+.logo {
+    width: 80px; /* Mittlere Größe */
+    height: auto;
+}
+
+/* Body with Background Animation */
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    animation: backgroundColorChange 15s infinite; /* Verlängert auf 15 Sekunden */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 15px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+p, form input, button {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-blue);
+    background-color: var(--light-blue);
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    color: white;
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--hover-blue);
+    color: #333;
+    border-color: var(--hover-blue);
+}
+
+/* Responsive Design - Navbar für mobile Geräte */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    .navbar-collapse { text-align: center; }
+    .navbar {
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+
+    .logo-container {
+        position: static; /* Logo in die Mitte für mobile Ansicht */
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1rem; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+}

@@ -1,0 +1,4 @@
+- ## #benchmarking
+##benchmarking #Maintainability #Development #Quality #Value #Creation #Value #Drivers #ValueBased #Software #Engineering #Software #Engineering 
+n this paper, we address the question of how the mea- surement data collected on a per-system basis can be used to perform systematic comparions between systems or groups of systems. Such comparisons amount to benchmarking of software products with respect to their technical quality. In order to make meaningful comparisons possible at the system level, the low-level source code measurements of each system must be aggregated. The manner of ag- gregation should be such that (i) differences in technolo- gies, architectures, size, functionality, etc are overcome, but (ii) sufficient information-value is retained after aggrega- tion. To meet these requirements, we employ a layered model of software product quality that we developed pre- viously [3].
+

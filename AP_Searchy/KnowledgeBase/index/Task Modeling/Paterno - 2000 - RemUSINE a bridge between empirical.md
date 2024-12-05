@@ -1,0 +1,144 @@
+- ## Elicitation
+#Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+gather information on the users' behaviour at their work place without expensive equipment;
+
+- ## InspectionBased
+#InspectionBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+inspection-based techniques to usability evaluation, designers analyse a user inter- face or its description
+
+- ## Cognitive
+#Cognitive #Walkthrough #InspectionBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+cognitive walkthrough,
+
+- ## Cognitive
+#Cognitive #Walkthrough #InspectionBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+found useful but limited because they are dependent on the ability of the evaluator, require multiple evaluators, or miss some relevant problems (Jeffries et al., 1991).
+
+- ## Heuristic
+#Heuristic #InspectionBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+heuristic evaluation
+
+- ## Heuristic
+#Heuristic #InspectionBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+found useful but limited because they are dependent on the ability of the evaluator, require multiple evaluators, or miss some relevant problems (Jeffries et al., 1991).
+
+- ## ModelBased
+#ModelBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+Model-based approaches
+
+- ## ModelBased
+#ModelBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+often aim to produce quantitative predictions of how well users will be able to perform tasks with a proposed design
+
+- ## ModelBased
+#ModelBased #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+uses an engineering model (like GOMS; Card et al., 1983) to ®nd the usability problems of the interface
+
+- ## Empirical
+#Empirical #Elicitation #Methods  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+empirical testing, the behaviour of real users is considered. It can be very expensive and can have some limitation. It requires long observations of users' behaviour
+
+- ## Quality
+#Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+Tasks/Time chart graph
+
+- ## Task
+#Task #Usability #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+display of the tasks the user never tried to perform.
+
+- ## Task
+#Task #Performance #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+summary and statistical information on the user sessions, such as duration, number of tasks failed and completed, number of errors,
+
+- ## Task
+#Task #Performance #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+display of the accomplished tasks and how many times
+
+- ## Error
+#Error #Detection  #Classification #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+display of the tasks the user tried to perform but failed because their preconditions were not satis®ed
+
+- ## Error
+#Error #Detection  #Classification #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+display of all the errors divided into precondition errors
+
+- ## Error
+#Error #Detection  #Classification #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+display of the task patterns found
+
+- ## Error
+#Error #Detection  #Classification #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+display of the entire result from the evaluation in temporal order.
+
+- ## Error
+#Error #Detection  #Classification #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+Errors/Time graph
+
+- ## Error
+#Error #Detection  #Classification #Quality #Characteristics  #Notations #Notations  #Task #Models #Task #Modelling #Task #Analysis  #Modeling 
+Tasks/Completed chart graph
+
+- ## RemUSINE
+#RemUSINE #Usability #Evaluation #Applications #Task #Modelling #Task #Analysis  #Modeling 
+RemUSINE addresses all three of these issues. We aim to evaluate applications that can be used by many users located in different places
+
+- ## RemUSINE
+#RemUSINE #Usability #Evaluation #Applications #Task #Modelling #Task #Analysis  #Modeling 
+users' behaviour can be detected using automatic logging tools that store in ®les all the user-generated events during the work sessions
+
+- ## RemUSINE
+#RemUSINE #Usability #Evaluation #Applications #Task #Modelling #Task #Analysis  #Modeling 
+creates an association between the physical events that are generated by the user while interacting with the application and the basic interaction tasks (the tasks that cannot be further decomposed in the task model and require only one action to be performed)
+
+- ## UserInterface
+#UserInterface #Design #Applications #Task #Modelling #Task #Analysis  #Modeling 
+Usability engineering (Nielsen, 1993) concerns the development of systematic methods to support usability evaluation
+
+- ## USAGE
+#USAGE #UserInterface #Design #Applications #Task #Modelling #Task #Analysis  #Modeling 
+USAGE (Byrne et al., 1994) that provides a tool supporting a method where the user actions, required to execute an application action in UIDE, are analysed by the NGOMSL approach
+
+- ## USAGE
+#USAGE #UserInterface #Design #Applications #Task #Modelling #Task #Analysis  #Modeling 
+However, this information is still limited in compar- ison with that contained in the logs of the user actions performed during work sessions.
+
+- ## Expressiveness
+#Expressiveness  #Notation #Challenges #Task #Modelling #Task #Analysis  #Modeling 
+less attention has been paid on how to use such an automatic support to identify more precisely errors in user interactions and, consequently, the problematic parts of a user interface
+
+- ## Expressiveness
+#Expressiveness  #Notation #Challenges #Task #Modelling #Task #Analysis  #Modeling 
+Current automatic tools, such as ErgoLight (Harel, 1999), that support usability evaluation by task models, use simple notations to specify such models, thus still depending on the evaluator to identify problematic parts.
+
+- ## Evaluation
+#Evaluation  #Task #Conformance #Challenges #Task #Modelling #Task #Analysis  #Modeling 
+support the evaluation of many users without requiring a heavy involvement of designers;
+
+- ## Task
+#Task #Quality #Factors #Challenges #Task #Modelling #Task #Analysis  #Modeling 
+usability testing is not widely used because it is highly time-consum- ing and expensive to bring users and evaluators together for a usability experiment and to perform analysis of empirical data, which is mainly manual
+
+- ## Task
+#Task #Identification #Challenges #Task #Modelling #Task #Analysis  #Modeling 
+problem is how to automatically identify the tasks that the user intends to perform
+
+- ## Norman
+#Norman #Model #Human #Information #Processing #Task #Analysis  #Modeling 
+identi®ed by analysing the possible phases of a user interaction according to the Norman's model (Norman, 1988).
+
+- ## Norman
+#Norman #Model #Human #Information #Processing #Task #Analysis  #Modeling 
+Intention, the user intended to perform the wrong task
+
+- ## Norman
+#Norman #Model #Human #Information #Processing #Task #Analysis  #Modeling 
+Action, the task the user intended to perform was correct but the actions supporting it were wrong
+
+- ## Norman
+#Norman #Model #Human #Information #Processing #Task #Analysis  #Modeling 
+Perception,the user has dif®culties in perceiving or correctly perceiving the information that is provided by the application
+
+- ## Norman
+#Norman #Model #Human #Information #Processing #Task #Analysis  #Modeling 
+Interpretation, the use misinterpreted the information provided by the application
+
