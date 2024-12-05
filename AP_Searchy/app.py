@@ -18,13 +18,8 @@ def init_db():
 
 @app.route('/')
 def index():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    cur.execute('SELECT content FROM papers LIMIT 1')  # Get the first record from the papers table
-    result = cur.fetchone()
-    conn.close()
-    result = result[0] if result else "Keine Inhalte gefunden."
-    return render_template('searchy.html', result=result)
+    # Render the searchy.html page with no result displayed initially
+    return render_template('searchy.html', result="")
 
 @app.route('/search', methods=['POST'])
 def search():
