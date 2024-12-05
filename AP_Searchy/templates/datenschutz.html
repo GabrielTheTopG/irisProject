@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Datenschutz | Searchy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Über uns | Searchy</title>
 </head>
 <body>
     <header class="fixed-top">
@@ -13,87 +13,57 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="d-flex ms-4 justify-content-end">
-                        <a class="nav-link me-3" href="{{ url_for('searchy') }}">Startseite</a>
+                        <a class="nav-link me-3" href="{{ url_for('index') }}">Startseite</a>
                         <a class="nav-link me-3" href="{{ url_for('about') }}">Über uns</a>
                         <a class="nav-link me-3" href="{{ url_for('impressum') }}">Impressum</a>
-                        <a class="nav-link me-3" href="{{ url_for('cookies') }}">Cookies</a>
+                        <a class="nav-link me-3" href="{{ url_for('cookies') }}">Cookies</a>                                              
                     </div>
-                </div>
-                <div class="logo-container">
-                    <img src="logo.jpg" alt="Logo" class="logo">
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <div class="container mt-5 text-center">
-            <h1>Datenschutz</h1>
-            <p>Wir freuen uns über Ihr Interesse an unserer Website. Der Schutz Ihrer Privatsphäre ist für uns sehr wichtig.</p>
+            <h1>Über uns</h1>
 
             <!-- Accordion Start -->
-            <div class="accordion" id="privacyAccordion">
+            <div class="accordion" id="aboutAccordion">
 
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingAccessData">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccessData" aria-expanded="true" aria-controls="collapseAccessData">
-                            Zugriffsdaten und Hosting
+                    <h2 class="accordion-header" id="headingMission">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMission" aria-expanded="true" aria-controls="collapseMission">
+                            Unsere Mission
                         </button>
                     </h2>
-                    <div id="collapseAccessData" class="accordion-collapse collapse show" aria-labelledby="headingAccessData" data-bs-parent="#privacyAccordion">
+                    <div id="collapseMission" class="accordion-collapse collapse show" aria-labelledby="headingMission" data-bs-parent="#aboutAccordion">
                         <div class="accordion-body">
-                            Sie können unsere Webseiten besuchen, ohne Angaben zu Ihrer Person zu machen. Bei jedem Aufruf einer Webseite speichert der Webserver automatisch ein Server-Logfile, das z. B. den Namen der angeforderten Datei, Ihre IP-Adresse, Datum und Uhrzeit des Abrufs enthält.
+                            Unser Ziel ist es, eine benutzerfreundliche Plattform zu schaffen, die Menschen dabei unterstützt, schnell und einfach an relevante Informationen zu gelangen.
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingDataCollection">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataCollection" aria-expanded="false" aria-controls="collapseDataCollection">
-                            Datenerhebung und -verwendung zur Vertragsabwicklung
+                    <h2 class="accordion-header" id="headingTeam">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTeam" aria-expanded="false" aria-controls="collapseTeam">
+                            Unser Team
                         </button>
                     </h2>
-                    <div id="collapseDataCollection" class="accordion-collapse collapse" aria-labelledby="headingDataCollection" data-bs-parent="#privacyAccordion">
+                    <div id="collapseTeam" class="accordion-collapse collapse" aria-labelledby="headingTeam" data-bs-parent="#aboutAccordion">
                         <div class="accordion-body">
-                            Wir erheben personenbezogene Daten, wenn Sie uns diese im Rahmen Ihrer Bestellung oder bei einer Kontaktaufnahme freiwillig mitteilen. Welche Daten erhoben werden, ist aus den jeweiligen Eingabeformularen ersichtlich.
+                            Unser Team besteht aus erfahrenen Entwicklern, Designern und Informationsspezialisten, die sich leidenschaftlich dafür einsetzen, Ihre Sucherfahrung zu verbessern.
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingDataSharing">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataSharing" aria-expanded="false" aria-controls="collapseDataSharing">
-                            Weitergabe von Daten
+                    <h2 class="accordion-header" id="headingContact">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+                            Kontaktieren Sie uns
                         </button>
                     </h2>
-                    <div id="collapseDataSharing" class="accordion-collapse collapse" aria-labelledby="headingDataSharing" data-bs-parent="#privacyAccordion">
+                    <div id="collapseContact" class="accordion-collapse collapse" aria-labelledby="headingContact" data-bs-parent="#aboutAccordion">
                         <div class="accordion-body">
-                            Wir geben Ihre Daten nur an Dritte weiter, soweit dies zur Vertragserfüllung notwendig ist oder Sie ausdrücklich eingewilligt haben.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingCookies">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCookies" aria-expanded="false" aria-controls="collapseCookies">
-                            Cookies
-                        </button>
-                    </h2>
-                    <div id="collapseCookies" class="accordion-collapse collapse" aria-labelledby="headingCookies" data-bs-parent="#privacyAccordion">
-                        <div class="accordion-body">
-                            Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwenden wir Cookies.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingRights">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRights" aria-expanded="false" aria-controls="collapseRights">
-                            Ihre Rechte
-                        </button>
-                    </h2>
-                    <div id="collapseRights" class="accordion-collapse collapse" aria-labelledby="headingRights" data-bs-parent="#privacyAccordion">
-                        <div class="accordion-body">
-                            Sie haben das Recht auf unentgeltliche Auskunft über die bei uns zu Ihrer Person gespeicherten Daten sowie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.
+                            Wir sind stets offen für Feedback. Besuchen Sie unsere <a href="kontakt.html">Kontaktseite</a>, um uns eine Nachricht zu senden.
                         </div>
                     </div>
                 </div>
@@ -104,13 +74,7 @@
     </main>
     <footer class="fixed-bottom">
         <nav class="navbar navbar-expand-md">
-            <div class="navbar-nav" style="margin-right: auto; margin-left: auto;">
-                <div class="d-flex">
-                    <a class="nav-link me-3" href="impressum.html">Impressum</a>
-                    <a class="nav-link me-3" href="datenschutz.html">Datenschutz</a>
-                    <a class="nav-link me-3" href="cookies.html">Cookies</a>
-                </div>
-            </div>
+            <div class="copyright">© 2024 | Aigner, Brechtelsbauer, Krug, Siebenhandl</div>
         </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
