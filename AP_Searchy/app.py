@@ -6,40 +6,22 @@ app = Flask(__name__)
 
 DATABASE = 'knowledge_base.db'
 
+# Function to establish a database connection
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
 
+# Function to initialize the database using db_module
 def init_db():
-    if not os.path.exists(DATABASE):
-        conn = sqlite3.connect(DATABASE)
-        c = conn.cursor()
-        c.execute('''CREATE TABLE IF NOT EXISTS papers (
-                        id INTEGER PRIMARY KEY,
-                        content TEXT,
-                        directory_name TEXT
-                    )''')
-        c.execute('''CREATE TABLE IF NOT EXISTS hashtags (
-                        id INTEGER PRIMARY KEY,
-                        paper_id INTEGER,
-                        hashtag TEXT,
-                        FOREIGN KEY (paper_id) REFERENCES papers (id)
-                    )''')
-        c.execute('''CREATE TABLE IF NOT EXISTS images (
-                        id INTEGER PRIMARY KEY,
-                        paper_id INTEGER,
-                        image_data TEXT,
-                        FOREIGN KEY (paper_id) REFERENCES papers (id)
-                    )''')
-        conn.commit()
-        conn.close()
+    from db_module import init_db as db_init  # Import the database initialization function from db_module
+    db_init()  # Initialize the database if it does not exist
 
 @app.route('/')
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT content FROM papers LIMIT 1')
+    cur.execute('SELECT content FROM papers LIMIT 1')  # Get the first record from the papers table
     result = cur.fetchone()
     conn.close()
     result = result[0] if result else "Keine Inhalte gefunden."
@@ -56,6 +38,22 @@ def search():
     result = result[0] if result else "Keine Inhalte gefunden."
     return render_template('searchy.html', result=result)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/impressum')
+def impressum():
+    return render_template('impressum.html')
+
+@app.route('/datenschutz')
+def datenschutz():
+    return render_template('datenschutz.html')
+
+@app.route('/cookies')
+def cookies():
+    return render_template('cookies.html')
+
 if __name__ == '__main__':
-    init_db()
+    init_db()  # Initialize the database on app startup
     app.run(debug=True)
