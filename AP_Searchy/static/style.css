@@ -44,21 +44,6 @@
     text-decoration: underline; /* Unterstreichung für Interaktivität */
 }
 
-/* Logo-Design */
-.logo-container {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    height: 100%; /* Füllt die Höhe der Navbar aus */
-}
-
-.logo {
-    width: 80px; /* Mittlere Größe */
-    height: auto;
-}
-
 /* Body with Background Animation */
 body {
     overflow-x: hidden;
@@ -71,8 +56,8 @@ body {
 }
 
 main {
-    max-width: 1200px;
-    margin: auto;
+    max-width: 100%;
+    margin: 20px;
     padding: 80px 15px;
     border-radius: 8px;
 }
@@ -109,7 +94,14 @@ p, form input, button {
     color: #333;
     border-color: var(--hover-blue);
 }
-
+/* Ensure all images are not cut off */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 .copyright {
     position: fixed;
     bottom: 22px;
